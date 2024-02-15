@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:second_flutter_app_dice_roll/dice_roller.dart';
 
 void main() {
   runApp(const MyApp());
 }
-
+ 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
+
+ 
 
   @override
   Widget build(BuildContext context) {
@@ -25,13 +28,12 @@ class MyApp extends StatelessWidget {
             Color.fromARGB(255, 15, 209, 209),
             Color.fromARGB(255, 2, 73, 66),
           ], end: Alignment.topLeft, begin: Alignment.bottomRight)),
-          child: Center(
-            child: Image.asset('assets/images/dice-1.png',
-            width: 200,
+          child: const Center(
+            child: DiceRoller()
             ),
           ),
         ),
-      ),
+    
     );
   }
 }
